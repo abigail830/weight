@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from brew.admin import admin_site
+from brew import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin_site.urls),
+    url(r'^$', views.home, name='index'),
+    url(r'^health$', views.health),
+    url(r'^submit$', views.submit),
+    url(r'^new_brew$', views.new_brew),
+    url(r'^bean/(?P<query_name>\w{0,50})/$', views.queryByBeanName)
 ]

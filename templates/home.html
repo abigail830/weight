@@ -1,0 +1,34 @@
+<head>
+
+</head>
+<body>
+<h1>Welcome Home</h1>
+<div>
+    <h3>Existing brew list:</h3>
+    {% if all_brews %}
+    <ul>
+    {% for brew in all_brews %}
+        <li><a href="/bean/{{ brew.bean_text }}/">{{ brew.id }} : {{ brew.bean_text }} @ {{brew.pub_date}}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No brew are available.</p>
+    {% endif %}
+    <br/>
+</div>
+<div>
+    <h3>Adding new brew info:</h3>
+    <form action="/new_brew" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="bean_name">Bean Name:</label>
+            <input type="text" id="bean_name" name="bean_name">
+        </div>
+        <br/>
+        <div class="button">
+            <button type="submit">Add new brew</button>
+        </div>
+    </form>
+
+</div>
+</body>

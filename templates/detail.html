@@ -1,0 +1,17 @@
+<head>
+
+</head>
+<body>
+<h1>Welcome to detail page</h1>
+<div>
+    <h3>Detail brew list:</h3>
+    {% if brew_detail %}
+    <ul>
+        <li>{{ brew_detail.id }} : {{ brew_detail.bean_text }} @ {{brew_detail.pub_date}}</li>
+    </ul>
+    {% else %}
+        <p>No brew are available.</p>
+    {% endif %}
+    <br/>
+</div>
+</body>
