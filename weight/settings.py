@@ -25,7 +25,7 @@ SECRET_KEY = '+ot=+6qvibauo$j@w(w)h8&xv^3$ux=)wx-im6t!ct96%2-fz#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','abigail830.pythonanywhere.com','weight.saraqian.com']
+ALLOWED_HOSTS = ['127.0.0.1','django-weight','abigail830.pythonanywhere.com','weight.saraqian.com']
 
 
 # Application definition
